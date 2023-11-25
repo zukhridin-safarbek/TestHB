@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">HB</string>
+    <string name="hostel">Отель</string>
+    <string name="about_hostel">Об отеле</string>
+    <string name="excellent">5 Превосходно</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="email">Почта</string>
+    <string name="first_name">Имя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="birthday">Дата рождения</string>
+    <string name="citizenship">Гражданство</string>
+    <string name="passport_number">Номер загранпаспорта</string>
+    <string name="passport_valid_period">Срок действия загранпаспорта</string>
+    <string name="reload">Повторить</string>
+    <string name="code_rub">&#8381;</string>
+    <string name="booking">Бронировать</string>
+    <string name="tourist">турист</string>
+    <string name="add_tourist">Добавить туриста</string>
+    <string name="tour">Тур</string>
+    <string name="foul_collection">Топливный сбор</string>
+    <string name="service_fee">Сервисный сбор</string>
+    <string name="for_payment">К оплате</string>
+    <string name="pay">Оплатить</string>
+    <string name="info_for_buyer">Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту</string>
+    <string name="text_info_for_buyer">Информация о покупателе</string>
+    <string name="departure_from">Вылет из</string>
+    <string name="country_city">Страна, город</string>
+    <string name="date">Даты</string>
+    <string name="number_of_nights">Кол-во ночей</string>
+    <string name="nights">ночей</string>
+    <string name="hotel">Отель</string>
+    <string name="number">Номер</string>
+    <string name="food">Питание</string>
+    <string name="order_payed">Заказ оплачен</string>
+    <string name="order_info">Подтверждение заказа %1$s может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.</string>
+</resources>

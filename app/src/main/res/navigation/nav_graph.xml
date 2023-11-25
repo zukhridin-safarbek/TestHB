@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="kg.ticode.testh.fragment.hotel.HotelFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_feedFragment_to_numbersOfHotelFragment"
+            app:destination="@id/numbersOfHotelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/numbersOfHotelFragment"
+        android:name="kg.ticode.testh.fragment.hotel.NumbersOfHotelFragment"
+        android:label="fragment_numbers_of_hotel"
+        tools:layout="@layout/fragment_numbers_of_hotel" >
+        <action
+            android:id="@+id/action_numbersOfHotelFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="kg.ticode.testh.fragment.hotel.BookingFragment"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_bookingFragment_to_payIsSuccessfulFragment"
+            app:destination="@id/payIsSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payIsSuccessfulFragment"
+        android:name="kg.ticode.testh.fragment.hotel.PayIsSuccessfulFragment"
+        android:label="fragment_pay_is_succesfull"
+        tools:layout="@layout/fragment_pay_is_succesfull" >
+        <action
+            android:id="@+id/action_payIsSuccessfulFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+</navigation>

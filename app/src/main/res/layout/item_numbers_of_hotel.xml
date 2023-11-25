@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageSliderPagerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="257dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSliderPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/circleIndicatorContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageSliderPagerContainer"
+        app:layout_constraintEnd_toEndOf="@id/imageSliderPagerContainer"
+        app:layout_constraintStart_toStartOf="@id/imageSliderPagerContainer">
+
+        <kg.ticode.testh.custom.view.CircleIndicatorView
+            android:id="@+id/circleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/number_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="Steigenberger Makadi"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSliderPagerContainer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/peculiaritiesRcView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number_name"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_peculiarities" />
+
+    <LinearLayout
+        android:id="@+id/detailAboutNumberBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_view_additionally_rounded_corners"
+        android:backgroundTint="#E5F1FF"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peculiaritiesRcView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:singleLine="true"
+            android:text="Подробнее о номере"
+            android:textColor="#0D77FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/next"
+            app:tint="#0D77FF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/priceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/detailAboutNumberBtn">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="от 134 673 Р"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hostelAddressBtn" />
+
+        <TextView
+            android:id="@+id/priceForIt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="за 7 ночей с перелётом"
+            android:textColor="#828796"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/price"
+            app:layout_constraintStart_toEndOf="@id/price" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/chooseNumberBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:paddingTop="15dp"
+        android:paddingBottom="14dp"
+        android:text="Выбрать номер"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:backgroundTint="#006EFF"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/priceContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

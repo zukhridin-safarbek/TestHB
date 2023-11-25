@@ -1,0 +1,6 @@
+package kg.ticode.data.error_model
+
+enum class FieldType {
+    FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, CITIZENSHIP, PASSPORT_NUMBER, PASSPORT_VALID_DATE
+, PHONE_NUMBER, EMAIL, NULL
+}
